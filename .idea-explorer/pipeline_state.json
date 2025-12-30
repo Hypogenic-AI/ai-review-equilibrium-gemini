@@ -1,0 +1,33 @@
+{
+  "created_at": "2025-12-30T11:29:41.093565",
+  "stages": {
+    "resource_finder": {
+      "status": "completed",
+      "started_at": "2025-12-30T11:29:41.094222",
+      "completed_at": "2025-12-30T11:43:42.097882",
+      "success": true,
+      "outputs": {
+        "literature_review": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/literature_review.md",
+        "resources_catalog": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/resources.md",
+        "papers_dir": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/papers",
+        "datasets_dir": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/datasets",
+        "code_dir": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/code"
+      }
+    },
+    "experiment_runner": {
+      "status": "failed",
+      "started_at": "2025-12-30T11:43:42.098221",
+      "completed_at": "2025-12-30T13:30:15.295432",
+      "success": false,
+      "outputs": {
+        "success": false,
+        "return_code": 1,
+        "elapsed_time": 6393.188882112503,
+        "log_file": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/logs/execution_gemini.log",
+        "transcript_file": "/data/hypogenicai/workspaces/ai-review-equilibrium-gemini/logs/execution_gemini_transcript.jsonl"
+      }
+    }
+  },
+  "current_stage": null,
+  "completed": false
+}

@@ -1,0 +1,31 @@
+{
+  "main_experiment": {
+    "avg_std_0": 0.23094010767585033,
+    "avg_std_1": 0.05773502691896258,
+    "correlations": {
+      "score_0_GPT-4o": 0.3283477621628255,
+      "score_0_Claude-3.5": NaN,
+      "score_0_GPT-4o-mini": NaN,
+      "ensemble_0": 0.3283477621628256,
+      "consensus_1": 0.17676550254690593
+    }
+  },
+  "calibration_experiment": {
+    "mean_score": 6.2666666666666675,
+    "correlation": 0.5970557703363663
+  },
+  "improvement_experiment": {
+    "original_score": 6,
+    "improved_score": 5,
+    "paper_id": "MWQCPYSJRN"
+  },
+  "sota_comparison": {
+    "debate_correlation": -0.5579643884991577,
+    "sota_correlation": -0.07493197741909167
+  },
+  "diversity_analysis": {
+    "round_0_similarity": 0.2106,
+    "round_1_similarity": 0.2955,
+    "change": "+40%"
+  }
+}

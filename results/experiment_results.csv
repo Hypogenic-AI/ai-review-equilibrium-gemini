@@ -1,0 +1,11 @@
+paper_id,gt_decision,gt_score,score_0_GPT-4o,score_0_Claude-3.5,score_0_GPT-4o-mini,avg_score_0,score_1_GPT-4o,score_1_Claude-3.5,score_1_GPT-4o-mini,avg_score_1
+tDirSp3pczB,Reject,6.8,8,9,8,8.333333333333334,8.0,9,8,8.333333333333334
+YDud6vPh2V,Reject,5.0,8,8,8,8.0,8.0,8,8,8.0
+xZ6H7wydGl,Accept (Poster),5.333333333333333,7,8,8,7.666666666666667,8.0,8,8,8.0
+CNY9h3uyfiO,Reject,4.25,7,8,8,7.666666666666667,8.0,8,8,8.0
+fXHl76nO2AZ,Accept (Poster),6.5,8,8,8,8.0,,8,8,5.333333333333333
+bglU8l_Pq8Q,Reject,5.0,8,8,8,8.0,8.0,8,8,8.0
+cU8rknuhxc,Accept (Spotlight),7.5,8,8,8,8.0,,8,8,5.333333333333333
+HFPTzdwN39,Accept (Poster),5.5,8,8,8,8.0,8.0,8,8,8.0
+EJKLVMB_9T,Reject,6.0,8,8,8,8.0,8.0,8,8,8.0
+MWQCPYSJRN,Reject,4.75,7,8,7,7.333333333333333,7.0,7,7,7.0

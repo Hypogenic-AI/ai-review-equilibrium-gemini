@@ -1,0 +1,964 @@
+[
+  {
+    "paper_id": "tDirSp3pczB",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 6.8,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper presents a theoretical analysis of contrastive unsupervised representation learning (CURL) by establishing sharp learning bounds for the downstream classification loss in relation to the contrastive loss. It focuses on explaining why larger negative samples improve classification performance by deriving upper and lower bounds that are tight in the negative sample size. The paper includes theoretical derivations and empirical validations across synthetic, vision, and language datasets.",
+        "strengths": [
+          "The paper addresses a significant gap in the theoretical understanding of CURL, particularly regarding the impact of negative sample size.",
+          "It provides novel sharp upper and lower bounds that are consistent with empirical observations.",
+          "The theoretical results are validated with thorough experiments across multiple datasets, enhancing the credibility of the findings.",
+          "The paper contributes to the field by offering practical insights into the role of negative samples in CURL."
+        ],
+        "weaknesses": [
+          "The paper's notation and mathematical derivations might be dense and challenging for readers not deeply familiar with the topic.",
+          "While the bounds are theoretically tight, the practical implications of these bounds in real-world applications are not fully explored.",
+          "Some parts of the paper, especially the technical sections, could benefit from clearer explanations to improve accessibility."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper makes a meaningful contribution to the theoretical understanding of contrastive unsupervised representation learning by addressing the impact of negative sample size, a critical aspect that has been underexplored. The derivation of sharp learning bounds and their empirical validation across diverse datasets are commendable. Despite some complexity in presentation, the paper's strengths in novelty and significance justify its acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper provides novel theoretical bounds for contrastive unsupervised representation learning (CURL). The authors establish sharp upper and lower bounds on downstream classification loss that are tight in the negative sample size. The key contribution is showing that the contrastive loss can serve as an estimator for downstream loss, with estimation gap decreasing as negative sample size increases. The theoretical results are validated through experiments on synthetic, vision and language datasets.",
+        "strengths": [
+          "Provides the first lower bound for CURL, enabling analysis of bound tightness",
+          "Theoretical results explain empirical observations about benefits of larger negative sample sizes",
+          "Bounds are significantly tighter than previous work and hold for all values of K",
+          "Thorough empirical validation on multiple datasets",
+          "Clear mathematical derivations with detailed proofs",
+          "Strong theoretical contribution that advances understanding of CURL"
+        ],
+        "weaknesses": [
+          "Limited discussion of computational costs vs benefits trade-off for larger K",
+          "Gap between supervised loss and accuracy not fully explained",
+          "Some experimental results (e.g., on CIFAR) show mixed alignment with theory",
+          "Data augmentation not considered in theoretical analysis"
+        ],
+        "score": 9,
+        "decision": "Accept",
+        "reasoning": "This paper makes significant theoretical contributions to understanding contrastive learning by providing the first lower bounds and establishing tighter upper bounds than existing work. The mathematical analysis is rigorous and well-presented. The theoretical results help explain empirical observations about negative sample sizes that previous bounds could not capture. While there are some limitations in the experimental validation and scope of analysis, the core theoretical contribution is novel and important enough to warrant acceptance at a top venue. The work advances the field's understanding of contrastive learning's effectiveness."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper presents novel theoretical bounds for contrastive unsupervised representation learning (CURL), specifically focusing on the relationship between the contrastive loss and downstream classification loss. The authors derive sharp upper and lower bounds that are considered tight regarding the negative sample size, providing explanations for the empirical success of larger negative sample sizes in enhancing classification performance. The theoretical findings are supported by experiments across synthetic and real datasets, demonstrating the validity of their proposed bounds.",
+        "strengths": [
+          "Novel theoretical contributions that improve the understanding of contrastive unsupervised representation learning by providing sharp learning bounds.",
+          "The derived bounds are shown to be tight in relation to the negative sample size, addressing a significant gap in existing literature.",
+          "Experiments are comprehensive, validating theoretical claims across various datasets, including synthetic, vision, and language domains.",
+          "The paper provides clear and detailed comparisons with existing theoretical work, highlighting the advantages of the proposed bounds."
+        ],
+        "weaknesses": [
+          "The paper may require additional clarity in explaining complex theoretical concepts, which might be challenging for readers unfamiliar with the topic.",
+          "Some sections are dense and could benefit from more intuitive explanations or visual aids to enhance understanding.",
+          "The ethical implications of the research could be better discussed, even if the study is primarily theoretical."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper makes significant advancements in understanding contrastive unsupervised representation learning through novel theoretical insights and empirical validation. While there are areas for improvement in clarity and discourse, the contributions are substantial enough to warrant acceptance."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "confidence": 4,
+        "argument": "After considering the additional reviews, I maintain my original score of 8. Both reviewers agree on the significance of the theoretical contributions of the paper, particularly in advancing the understanding of contrastive learning through novel lower and upper bounds. Reviewer 1 highlights the rigor and novelty of the theoretical analysis, while Reviewer 2 appreciates the combination of theoretical insights with empirical validation. However, both mention limitations such as experimental validation and clarity, which I also noted in my initial review. These areas for improvement slightly temper the enthusiasm for a higher score. Overall, the paper's contributions to the theoretical understanding of contrastive learning are substantial and worthy of acceptance, but the aforementioned limitations prevent a perfect score."
+      },
+      "Claude-3.5": {
+        "score": 9,
+        "confidence": 4,
+        "review": "After considering the other reviewers' perspectives, I maintain my original score of 9. While both reviewers give strong scores of 8 and acknowledge the paper's significant theoretical contributions, I believe the paper deserves a 9 for several reasons beyond what they noted. First, the sharp learning bounds derived in this work are not just novel, but represent a fundamental advancement in our theoretical understanding of contrastive learning. The paper goes beyond just analyzing negative sample size to provide a comprehensive framework that connects sample complexity to representation quality. Second, the empirical validation is exceptionally thorough, spanning multiple architectures and datasets, providing stronger evidence than typically seen in theoretical papers. Third, while Reviewer 1 notes presentation complexity as a minor weakness, I find the technical exposition to be appropriate given the depth of the theoretical results. The mathematical rigor combined with practical insights and extensive validation continues to justify the higher score of 9.",
+        "main_strengths": [
+          "Fundamental theoretical advancement in understanding contrastive learning",
+          "Sharp learning bounds with practical implications",
+          "Exceptionally thorough empirical validation",
+          "Strong mathematical rigor balanced with practical insights"
+        ],
+        "main_weaknesses": [
+          "Some complexity in presentation (though appropriate given content)"
+        ],
+        "questions_for_authors": [
+          "Could you provide additional intuition for the key theoretical results for practitioners?"
+        ],
+        "recommended_decision": "Accept",
+        "confidence_reasons": [
+          "Deep expertise in theoretical machine learning",
+          "Extensive experience with contrastive learning literature",
+          "Clear understanding of both theoretical and empirical contributions"
+        ]
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "argument": "After reviewing the comments from other reviewers, I maintain my score of 8 for several reasons. The paper indeed makes a meaningful contribution to the theoretical understanding of contrastive unsupervised representation learning, specifically regarding the impact of negative sample size. The derivation of sharp learning bounds and their empirical validation across diverse datasets are commendable as noted by Reviewer 1. However, while Reviewer 2 highlights the novelty of the lower bounds and tighter upper bounds established in this work, I believe that the limitations in experimental validation and the scope of analysis, which they mentioned, are significant enough to prevent a higher score. The presentation complexity also remains a concern, as it may hinder broader understanding and application of the theoretical insights. Therefore, while the paper is strong in its theoretical contributions, the remaining areas for improvement justify a score of 8 rather than higher."
+      }
+    }
+  },
+  {
+    "paper_id": "YDud6vPh2V",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 5.0,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper introduces a novel reinforcement learning algorithm called \u03be-learning, which extends the Successor Feature (SF) framework to handle general reward functions, overcoming the limitations of linear decomposition. The authors propose a cumulative discounted probability of successor features, provide theoretical convergence guarantees, and demonstrate its effectiveness through experiments in both discrete and continuous environments.",
+        "strengths": [
+          "The paper addresses a significant limitation in the SF framework by extending it to general reward functions.",
+          "Theoretical proofs of convergence and performance guarantees are provided, strengthening the paper's scientific rigor.",
+          "Comprehensive experiments demonstrate the advantages of \u03be-learning over classical SF and Q-learning in various settings.",
+          "The paper contributes to the field of transfer learning in reinforcement learning, which is a critical area for real-world applications."
+        ],
+        "weaknesses": [
+          "The paper is dense with mathematical notations and proofs, which may be challenging for readers not deeply familiar with the area.",
+          "The experiments, while comprehensive, could include more diverse environments to further validate the generality of the proposed approach.",
+          "The computational complexity of \u03be-learning, particularly in terms of the GPI procedure, is acknowledged but not thoroughly addressed with practical solutions."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in the field of reinforcement learning by extending the SF framework to handle general reward functions. Theoretical contributions are solid, and the experiments convincingly demonstrate the practical benefits of \u03be-learning. While there are areas for improvement, particularly in terms of accessibility and broader experimental validation, the core contributions are strong enough to warrant acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper proposes \u03be-learning, a novel successor feature (SF) framework for transfer learning in reinforcement learning that can handle general reward functions, unlike classical SF approaches that are limited to linear reward functions. The authors provide theoretical convergence proofs, performance guarantees, and demonstrate empirically that \u03be-learning outperforms standard Q-learning and classical SF approaches on both linear and non-linear reward tasks.",
+        "strengths": [
+          "Strong theoretical foundation with rigorous mathematical proofs for convergence and performance guarantees",
+          "Novel approach that extends SF to general reward functions, addressing a key limitation",
+          "Comprehensive empirical evaluation on both discrete and continuous environments",
+          "Clear connection to and improvement upon existing SF frameworks",
+          "Well-written with detailed technical appendices"
+        ],
+        "weaknesses": [
+          "Computational complexity increases linearly with number of tasks (though this is acknowledged)",
+          "Limited experimental evaluation with only two environments",
+          "Handling continuous feature spaces requires discretization which may not scale well",
+          "Some practical implementation details relegated to appendix"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "This paper makes a significant theoretical contribution by extending successor features to general reward functions while maintaining mathematical rigor. The proposed \u03be-learning framework is well-motivated, theoretically sound, and demonstrates clear empirical advantages over existing approaches. While there are some scalability concerns, the core contribution advances the field meaningfully. The combination of strong theoretical foundations and practical demonstration makes this worthy of publication at a top venue like ICLR."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper presents a novel reinforcement learning algorithm called \u03be-learning, which enhances the traditional Successor Features (SF) framework to better handle general reward functions. By learning the cumulative discounted probability of successor features, \u03be-learning allows for more effective transfer learning across tasks with varying reward structures. The authors provide theoretical proofs of convergence, demonstrate its application in meta-reinforcement learning, and present experimental results showcasing its advantages over existing methods in both linear and non-linear reward scenarios.",
+        "strengths": [
+          "Novelty: Introduces \u03be-learning, an innovative approach that extends the SF framework to general reward functions.",
+          "Theoretical Contributions: Provides rigorous mathematical proofs of convergence and guarantees on transfer performance, enhancing the theoretical foundation of the method.",
+          "Experimental Validation: Shows clear empirical advantages of \u03be-learning over traditional Q-learning and SF methods across multiple tasks with varying reward structures.",
+          "Clarity: The paper is well-structured, with a logical flow from introduction to methods and experiments, making complex ideas accessible."
+        ],
+        "weaknesses": [
+          "Complexity: The mathematical formulation and proofs may be challenging for readers without a strong background in theoretical reinforcement learning.",
+          "Implementation Details: Some aspects of the experimental setup and algorithm implementation could benefit from more clarity and detail to ensure reproducibility."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in the field of transfer learning within reinforcement learning. Its novel approach addresses a well-known limitation of existing methods, and the theoretical proofs substantiate its claims. While the complexity of the mathematical content may pose challenges, the overall contributions are substantial and relevant, warranting acceptance."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "argument": "Upon re-evaluation of the paper and considering the reviews provided by other experts, I find that the points raised resonate well with my initial assessment. Reviewer 1 highlights the significant theoretical advancement achieved by extending successor features to general reward functions, which I also recognized as a core strength. The scalability concerns mentioned are valid, but as noted, the paper's contribution is substantial in advancing theoretical understanding. Reviewer 2 emphasizes the breakthrough in addressing limitations in transfer learning, supported by rigorous proofs, which aligns with my appreciation of the paper's theoretical robustness. While both reviewers acknowledge the complexity of the mathematical content, the clarity and impact of the contributions justify its acceptance. Therefore, I maintain my score of 8, agreeing with the consensus that the paper is a strong candidate for publication at ICLR."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After considering the other reviewers' perspectives, I maintain my score of 8. Their reviews align with my original assessment regarding the paper's key strengths: the theoretical advancement of the SF framework and solid mathematical foundations. Both reviewers highlight the significance of addressing limitations in existing methods, which reinforces my initial evaluation of the paper's novelty and impact. The concerns raised about mathematical complexity and accessibility (Reviewer 2) and the need for broader experimental validation (Reviewer 1) are valid but minor relative to the paper's contributions. These align with my original assessment that while there is room for improvement in presentation, the core technical contributions are strong enough to merit acceptance.",
+        "strengths": [
+          "Significant theoretical advancement in SF framework",
+          "Rigorous mathematical proofs",
+          "Practical demonstration through experiments",
+          "Important contribution to transfer learning in RL"
+        ],
+        "weaknesses": [
+          "Mathematical complexity may limit accessibility",
+          "Could benefit from broader experimental validation",
+          "Some presentation aspects could be improved"
+        ],
+        "suggestion_for_authors": "Consider adding more intuitive explanations alongside the mathematical derivations to improve accessibility. Expanding the experimental validation to include more diverse scenarios would strengthen the paper further."
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "review": {
+          "summary": "The paper presents a noteworthy advancement in reinforcement learning by extending the SF framework to accommodate general reward functions. The theoretical underpinnings are robust, and the empirical results illustrate the practical advantages of \u03be-learning.",
+          "strengths": [
+            "Significant theoretical contribution by extending successor features to general reward functions.",
+            "The proposed \u03be-learning framework is well-motivated and mathematically rigorous.",
+            "Empirical results convincingly demonstrate the practical benefits of the proposed method over existing approaches."
+          ],
+          "weaknesses": [
+            "There are areas for improvement in terms of accessibility, as some parts of the theoretical exposition may be challenging for a broader audience.",
+            "Scalability concerns were noted, which could limit the application of the proposed method in larger-scale environments.",
+            "Broader experimental validation is necessary to fully establish the advantages of \u03be-learning across various domains."
+          ],
+          "conclusion": "While there are valid points raised regarding accessibility and scalability, the core contributions remain strong enough to warrant acceptance. The combination of theoretical rigor and practical demonstration justifies the original score."
+        }
+      }
+    }
+  },
+  {
+    "paper_id": "xZ6H7wydGl",
+    "ground_truth_decision": "Accept (Poster)",
+    "ground_truth_score": 5.333333333333333,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper introduces a novel approach to learning stochastic differential equations (SDEs) by using an importance sampling estimator that eliminates the need for sequential SDE integrators. This method is designed to produce lower-variance gradient estimates and is highly parallelizable, allowing for efficient use of parallel hardware. The authors demonstrate the effectiveness of their approach through experiments on various datasets, showing improved computational efficiency and stability compared to traditional methods.",
+        "strengths": [
+          "The proposed method significantly reduces computational time by removing sequential dependencies, making it highly parallelizable.",
+          "The approach results in lower-variance gradient estimates compared to traditional SDE integration methods.",
+          "The paper provides a solid theoretical foundation, supported by Girsanov's theorem, for the proposed importance sampling technique.",
+          "Extensive experiments demonstrate the method's effectiveness in high-dimensional settings and its applicability to variational Gaussian processes."
+        ],
+        "weaknesses": [
+          "The paper's clarity suffers from a dense presentation of mathematical concepts, which may be challenging for readers unfamiliar with SDEs or importance sampling.",
+          "Some of the experiments, particularly those involving real-world datasets, could benefit from more detailed explanations and visualizations.",
+          "The paper assumes a certain level of familiarity with advanced mathematical and computational concepts, which might limit accessibility to a broader audience."
+        ],
+        "score": 7,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and well-justified approach to learning SDEs, addressing significant computational challenges inherent in traditional methods. The strengths in novelty, theoretical grounding, and experimental validation outweigh the weaknesses in clarity and accessibility. The proposed method's ability to efficiently handle high-dimensional data and its potential applicability to a wide range of problems make it a valuable contribution to the field of machine learning and SDE modeling."
+      },
+      "Claude-3.5": {
+        "summary": "This paper proposes a novel algorithm for learning stochastic differential equations (SDEs) using importance sampling rather than traditional SDE integrators. The method enables efficient parallel computation and produces lower-variance gradient estimates compared to integrator-based approaches. The authors demonstrate improved performance on both synthetic and real-world datasets, including high-dimensional problems.",
+        "strengths": [
+          "Novel approach that avoids sequential computation limitations of SDE integrators",
+          "Strong theoretical foundation with clear mathematical derivations",
+          "Empirically demonstrates significant speedups (52x faster on Lorenz system)",
+          "Enables scaling to higher dimensions than previous methods",
+          "Supports probabilistic approaches like variational Gaussian processes",
+          "Thorough experimental validation including gradient variance analysis"
+        ],
+        "weaknesses": [
+          "Higher memory requirements compared to adjoint-based methods",
+          "Limited to certain classes of diffusion coefficients",
+          "Some bias introduced by discretization (though this vanishes as \u0394t\u21920)",
+          "Could benefit from more real-world applications/examples"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in SDE learning that addresses key limitations of existing methods. The ability to parallelize computation and handle high-dimensional problems represents an important step forward. The theoretical foundations are sound and the empirical results are convincing, showing substantial performance improvements. While there are some limitations regarding memory usage and applicable diffusion coefficients, the overall contribution is valuable to the field. The paper is well-written and the methods are clearly explained with appropriate mathematical rigor."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper introduces a novel algorithm for efficiently estimating probabilities in stochastic differential equation (SDE) models, significantly improving the computational efficiency and reducing gradient variance during the learning process. It emphasizes the use of importance sampling to generate trajectories that pass through observed data points, eliminating the need for traditional SDE integrators and allowing for parallel computation. Experimental results demonstrate the algorithm's effectiveness in high-dimensional settings, showcasing its advantages over existing methods.",
+        "strengths": [
+          "The proposed algorithm provides a significant speedup by eliminating the sequential dependencies inherent in traditional SDE integration methods.",
+          "Empirical results indicate lower variance gradients, which enhance the stability and robustness of the learning process.",
+          "The framework supports the use of large-scale parallel hardware, making it suitable for modern machine learning applications.",
+          "The paper addresses an important problem in the field of SDE learning with practical implications for various applications in science and finance."
+        ],
+        "weaknesses": [
+          "The theoretical foundations, while present, could benefit from a more detailed exposition to enhance accessibility for readers unfamiliar with stochastic calculus.",
+          "Some experimental comparisons lack comprehensive benchmarking against a broader range of existing methods to fully validate the claimed advantages.",
+          "The reliance on Gaussian assumptions for certain aspects of the proposed method may limit its applicability in non-Gaussian contexts."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and significant contribution to SDE learning, with strong empirical support for its claims. While there are areas for improvement in theoretical clarity and experimental breadth, the overall impact of the work is substantial, making it a valuable addition to the literature."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "argument": "Upon re-evaluation, I agree with the other reviewers that the paper makes a significant contribution to the field of SDE learning. Initially, I appreciated the parallelization and handling of high-dimensional problems, but I did not fully consider the broader impact of these advancements. Reviewer 1 highlights the balance between theoretical soundness and empirical evidence, which I concur with after a second review. Reviewer 2 points out the need for theoretical clarity and experimental breadth, which are areas that could be improved but do not significantly detract from the overall contribution. The empirical results are indeed strong and validate the claims made. Thus, I have adjusted my score to reflect the paper's substantial impact and valuable contributions to the field, as noted by my peers."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After reviewing the other experts' assessments, I maintain my original score of 8. The other reviewers' comments align well with my initial evaluation, particularly regarding the paper's novel contribution to SDE learning and strong empirical validation. Reviewer 1 raises a valid point about clarity and accessibility issues, which I had also noted, but like them, I believe these are outweighed by the technical strengths. Reviewer 2's assessment particularly resonates with my view on the substantial impact of the work despite some room for improvement in theoretical exposition. The consistency across all three reviews (scores of 7, 8, and 8) reinforces my confidence in the paper's strong contribution to the field.",
+        "strengths": [
+          "Novel and well-justified approach to learning SDEs",
+          "Strong empirical validation of the method",
+          "Efficient handling of high-dimensional data",
+          "Broad applicability across different problem domains"
+        ],
+        "weaknesses": [
+          "Some clarity issues in theoretical presentation",
+          "Could benefit from broader experimental validation",
+          "Accessibility could be improved for wider audience"
+        ],
+        "suggestion_to_authors": "Consider improving the theoretical exposition's clarity and expanding the experimental validation. While the current results are strong, making the work more accessible would increase its impact in the field. Adding more detailed explanations of the theoretical foundations would help readers better understand the innovations presented."
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "review": {
+          "strengths": [
+            "The paper introduces a novel approach to learning stochastic differential equations (SDEs) that effectively addresses computational challenges present in traditional methods.",
+            "The method's ability to handle high-dimensional data is a significant advantage, making it applicable to a wide range of problems.",
+            "The theoretical foundations of the proposed method are robust, and the empirical results demonstrate substantial performance improvements over existing approaches."
+          ],
+          "weaknesses": [
+            "Some aspects of the paper could benefit from improved clarity and accessibility, particularly for readers who may not be deeply familiar with the mathematical background.",
+            "There are limitations regarding memory usage and the types of diffusion coefficients that can be handled, which the authors acknowledge but do not explore in depth."
+          ],
+          "comments": [
+            "The arguments presented by Reviewer 1 regarding clarity are valid. While the theoretical and empirical contributions are strong, clearer explanations could enhance the paper's accessibility.",
+            "Reviewer 2's points about the sound theoretical foundations and the convincing empirical results align with my own assessment. The ability to parallelize computation is indeed an important advancement.",
+            "Overall, while I acknowledge the concerns raised about memory usage and diffusion coefficients, I believe the paper's strengths and contributions to the field outweigh these weaknesses."
+          ]
+        }
+      }
+    }
+  },
+  {
+    "paper_id": "CNY9h3uyfiO",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 4.25,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper explores the concept of reward shifting in value-based Deep Reinforcement Learning (DRL), proposing that a linear transformation of rewards is equivalent to initializing the Q-function differently. This insight is applied to create conservative exploitation with positive reward shifts and curiosity-driven exploration with negative reward shifts. The paper demonstrates the utility of this approach in offline RL, online continuous control, and discrete action space exploration tasks.",
+        "strengths": [
+          "The paper introduces a novel perspective on reward shifting as equivalent to Q-function initialization, which is a simple yet impactful idea.",
+          "The proposed method is versatile, applicable to both offline and online RL settings, and demonstrates improvements in various tasks.",
+          "The work provides empirical evidence across multiple domains, showcasing the effectiveness of the method in both continuous and discrete action spaces.",
+          "The paper is well-organized, with clear motivations and detailed experimental results."
+        ],
+        "weaknesses": [
+          "The theoretical analysis of the equivalence between reward shifting and Q-function initialization could be further strengthened and clarified.",
+          "Some experimental details, such as the choice of hyperparameters for the reward shifts, appear somewhat ad-hoc and lack thorough justification.",
+          "While the results are promising, the paper could benefit from a deeper comparison with existing exploration techniques to highlight relative advantages."
+        ],
+        "score": 7,
+        "decision": "Accept",
+        "reasoning": "The paper provides a novel insight into reward shaping, effectively linking it to Q-function initialization, which is both theoretically interesting and practically useful. The method's applicability across various RL settings and its demonstrated effectiveness in experiments support its contribution to the field. However, the theoretical underpinnings could be more robust, and a more comprehensive comparison with existing methods would enhance the paper's impact. Despite these weaknesses, the strengths and novelty justify acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper studies the effects of linear reward transformations in deep reinforcement learning, specifically focusing on reward shifting. The authors show that reward shifting is equivalent to changing the initialization of Q-functions in function approximation. They demonstrate that positive reward shifting leads to conservative exploitation while negative shifting enables curiosity-driven exploration. The paper validates these insights across offline RL, online continuous control, and discrete action space exploration tasks.",
+        "strengths": [
+          "Novel theoretical insight connecting reward shifting to Q-function initialization",
+          "Broad applicability across multiple RL settings (offline, online continuous, discrete)",
+          "Simple yet effective method that can be easily integrated with existing algorithms",
+          "Thorough empirical validation across diverse environments",
+          "Clear mathematical analysis and intuitive explanations"
+        ],
+        "weaknesses": [
+          "Limited theoretical analysis of convergence properties",
+          "Sensitivity to hyperparameter choices not fully explored",
+          "Some claims about equivalence to initialization could use stronger formal proofs",
+          "Method requires multiple Q-networks which increases computational cost",
+          "Comparisons to some relevant baseline methods are missing"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents an important theoretical insight about the relationship between reward shifting and Q-function initialization that has practical implications across multiple RL settings. While the theoretical analysis could be deeper, the empirical results are strong and comprehensive. The method is simple to implement and broadly applicable, making it a valuable contribution to the field. The clear exposition and thorough experiments demonstrate both the theoretical understanding and practical utility of the approach. The weaknesses are mostly around deeper theoretical analysis and comprehensive ablations rather than fundamental flaws in the approach."
+      },
+      "GPT-4o-mini": {
+        "summary": "This paper investigates the concept of reward shifting in value-based Deep Reinforcement Learning (DRL) and demonstrates its equivalence to varying initializations of the Q-function. The authors argue that positive reward shifts encourage conservative exploitation while negative shifts promote curiosity-driven exploration. They validate their insights through experiments across different tasks, showing improved performance in offline and online RL scenarios and enhancing existing methods like Random Network Distillation.",
+        "strengths": [
+          "The paper presents a novel perspective on reward shaping by establishing a clear equivalence between reward shifting and Q-function initialization, potentially contributing to both theoretical understanding and practical implementations in DRL.",
+          "The experimental validation across multiple environments and tasks showcases the versatility and effectiveness of the proposed method, demonstrating significant improvements over existing algorithms.",
+          "The approach is well-structured, with a clear delineation of contributions and a logical flow from theory to application, making it accessible to a broad audience."
+        ],
+        "weaknesses": [
+          "While the concept of reward shifting is interesting, the paper could benefit from a deeper exploration of the theoretical implications and limitations of the approach, especially concerning its application in more complex environments.",
+          "The choice of hyperparameters for reward shifting appears somewhat empirical, and further theoretical justification or automated tuning methods could enhance reproducibility and applicability.",
+          "The connection to existing curiosity-driven methods could be elaborated more, particularly regarding how the proposed method interacts with or improves upon those existing techniques."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in the understanding of reward shaping in DRL, backed by solid experimental results. However, it could be strengthened by a more rigorous theoretical analysis and discussion of hyperparameter sensitivity. Overall, it offers valuable insights that could lead to improved performance in various RL applications."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "argument": "After considering the feedback from other reviewers, I have decided to adjust my score from 7 to 8. The paper presents a noteworthy advancement in the understanding of reward shaping in deep reinforcement learning. Both reviewers highlighted the significant theoretical insight regarding the relationship between reward shifting and Q-function initialization, which I agree is a valuable contribution. The experimental results are robust and showcase the practical applicability of the approach across different RL settings. While I initially had concerns about the depth of the theoretical analysis, I concur with the other reviewers that the empirical evidence and practical implications presented are strong. Furthermore, the paper could benefit from a more extensive discussion on hyperparameter sensitivity and more comprehensive ablation studies, but these are not critical flaws. Overall, the paper offers meaningful insights that can enhance performance in various reinforcement learning applications, meriting a higher score."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After considering the other reviewers' perspectives, I maintain my original score of 8. The other reviewers' assessments largely align with my initial evaluation, particularly regarding the paper's novel theoretical connections between reward shaping and Q-function initialization. Reviewer 1's concern about needing more comprehensive comparisons is valid but not severe enough to lower the score, as the existing experimental validation is already substantial. Reviewer 2's point about hyperparameter sensitivity is well-taken, but this is a common limitation in DRL methods and doesn't significantly detract from the paper's contribution. The theoretical and practical significance of connecting reward shaping to Q-initialization remains the paper's key strength, and both reviewers acknowledge this fundamental contribution.",
+        "strengths": [
+          "Novel theoretical connection between reward shaping and Q-function initialization",
+          "Strong experimental validation across multiple environments",
+          "Broad applicability across different RL settings",
+          "Clear practical implications for improving RL algorithms"
+        ],
+        "weaknesses": [
+          "Could benefit from more rigorous theoretical analysis",
+          "Limited discussion of hyperparameter sensitivity",
+          "Comparisons with existing methods could be more comprehensive"
+        ],
+        "suggestion_for_authors": "Consider addressing the hyperparameter sensitivity analysis and expanding the theoretical proofs in the appendix. While the current experimental comparisons are sufficient, adding more baseline comparisons would strengthen the paper further.",
+        "recommendation": "Accept"
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "argument": "The paper effectively explores the relationship between reward shaping and Q-function initialization in reinforcement learning, providing both theoretical insights and practical implications. The contributions are significant, as evidenced by the positive empirical results across various RL settings. While Reviewer 1 raises valid points regarding the need for a more robust theoretical foundation and a more comprehensive comparison with existing methods, the novelty and applicability of the approach remain strong. Reviewer 2 echoes this sentiment, highlighting the practical utility and ease of implementation. The critiques primarily focus on the depth of theoretical analysis and the need for more extensive ablations rather than fundamental flaws. Given the overall strengths and the potential impact of the work, I maintain my score of 8."
+      }
+    }
+  },
+  {
+    "paper_id": "fXHl76nO2AZ",
+    "ground_truth_decision": "Accept (Poster)",
+    "ground_truth_score": 6.5,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper presents a novel method called Gradient Importance Learning (GIL) for handling incomplete datasets in machine learning tasks. GIL leverages reinforcement learning to adjust the gradients during model training, allowing models to learn directly from data with missing values without the need for imputation. The method is tested across various datasets, including time-series, tabular, and image data, demonstrating superior performance over traditional imputation-based approaches.",
+        "strengths": [
+          "Innovative use of reinforcement learning to address the issue of missing data.",
+          "Eliminates the need for data imputation, which can propagate errors.",
+          "Demonstrates strong performance across a variety of datasets and missing data types.",
+          "Provides a flexible framework that can be enhanced with additional feature learning techniques."
+        ],
+        "weaknesses": [
+          "Complexity of the method may hinder its accessibility and adoption by practitioners.",
+          "The paper could benefit from a clearer exposition and more structured presentation of the GIL framework.",
+          "Limited discussion on the computational overhead introduced by the reinforcement learning component."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and significant contribution to the field of machine learning by addressing the common problem of missing data through an innovative approach. The use of reinforcement learning to directly learn from incomplete data without imputation is a noteworthy advancement. The method's demonstrated superiority across diverse datasets and its potential adaptability to other feature learning techniques make it a valuable addition to the literature. Some improvements in clarity and discussion of computational complexities would enhance the paper, but the core contribution is strong enough to warrant acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper proposes Gradient Importance Learning (GIL), a novel approach for handling missing data in deep learning models without requiring imputation. GIL uses reinforcement learning to learn importance weights for gradients during backpropagation, allowing the model to leverage information from missingness patterns. The method is evaluated on healthcare datasets (MIMIC-III and ophthalmic data) and MNIST, showing superior performance compared to imputation-based approaches.",
+        "strengths": [
+          "Novel technical approach that avoids imputation and its associated error propagation",
+          "Comprehensive theoretical foundation with clear propositions and proofs",
+          "Strong empirical validation on real-world healthcare datasets",
+          "Flexible framework that can be extended with other learning techniques like contrastive learning",
+          "Clear ablation studies showing the value of learned importance weights vs. heuristics"
+        ],
+        "weaknesses": [
+          "Limited comparison to other direct handling approaches of missing data",
+          "Computational complexity of the RL component is not thoroughly discussed",
+          "Hyperparameter sensitivity analysis is missing",
+          "The approach is limited to MLPs and LSTMs, not directly applicable to CNNs",
+          "Some experimental settings (like MNIST) feel somewhat artificial for missing data scenarios"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant contribution to handling missing data in deep learning, with strong theoretical foundations and practical results. The method addresses a real problem in an innovative way, showing clear improvements over existing approaches. While there are some limitations in scope and analysis, the core contribution is sound and well-validated. The healthcare applications demonstrate clear practical value, and the framework's flexibility suggests potential for further development. The strengths substantially outweigh the weaknesses."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper presents a novel approach called Gradient Importance Learning (GIL) aimed at enabling deep learning models (MLPs and LSTMs) to make predictions directly from incomplete datasets without the need for imputation. The authors highlight the issues with existing imputation-based methods, particularly in healthcare contexts, and emphasize how GIL leverages reinforcement learning to adjust gradient updates based on the importance of observed data, thus circumventing the challenges of imputation error propagation. The method is empirically validated on various datasets, demonstrating superior performance compared to traditional imputation-prediction frameworks.",
+        "strengths": [
+          "Introduces a novel framework (GIL) that allows direct inference from incomplete data without imputation, addressing a significant limitation in existing approaches.",
+          "Utilizes reinforcement learning to dynamically adjust gradients, which is a fresh perspective on handling missing data.",
+          "Empirical results show consistent improvement over state-of-the-art imputation methods across multiple datasets, including healthcare applications.",
+          "The paper provides a thorough theoretical foundation for the proposed method, supported by well-structured experiments."
+        ],
+        "weaknesses": [
+          "The paper could benefit from a clearer explanation of the RL framework used to generate the importance matrix, which may not be straightforward for all readers.",
+          "Some technical details, particularly in the experiments section, lack clarity regarding the implementations and hyperparameters used, which could hinder reproducibility.",
+          "While the results are promising, further exploration of the method's limitations and its applicability to other types of missing data scenarios would strengthen the paper."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant contribution to the field of machine learning by proposing a new method that effectively handles missing data without imputation, backed by solid empirical evidence. Despite some areas needing clarification, the novelty and potential impact of GIL make it a worthy addition to the conference."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "Score": 8,
+        "Argument": "After reviewing the feedback from the other reviewers, I maintain my initial score. The paper indeed presents a significant contribution to the field of machine learning by introducing a method for handling missing data without imputation, which is both novel and impactful. Reviewer 1 highlights the strong theoretical foundations and practical applications, especially in healthcare, and acknowledges the method's innovative approach and flexibility. Similarly, Reviewer 2 appreciates the empirical evidence supporting the method's effectiveness. While both reviewers note some limitations and areas that could benefit from further clarification, these do not detract significantly from the paper's overall contribution. The strengths, particularly the theoretical soundness and practical applicability, continue to substantially outweigh any weaknesses. Thus, I stand by my original evaluation and score."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After considering the other reviewers' perspectives, I maintain my score of 8. Their reviews align with my original assessment regarding the paper's key strengths: (1) the novel approach to handling missing data without imputation, (2) strong empirical validation across diverse datasets, and (3) the broader potential impact on the field. Reviewer 1's point about computational complexity is valid and echoes my earlier concerns, but doesn't warrant a score change given the paper's significant contributions. The consensus among reviewers reinforces that this work represents an important advancement in handling missing data, with practical applications and theoretical soundness.",
+        "strengths": [
+          "Novel approach to handling missing data without requiring imputation",
+          "Strong empirical validation across multiple datasets",
+          "Theoretical soundness and clear methodology",
+          "Broad potential impact and adaptability to other feature learning techniques"
+        ],
+        "weaknesses": [
+          "Could benefit from clearer exposition in some sections",
+          "Limited discussion of computational complexity",
+          "Some implementation details could be more thoroughly explained"
+        ],
+        "suggestion": "Accept",
+        "confidence_explanation": "High confidence due to expertise in missing data handling and reinforcement learning, plus alignment with other expert reviewers' detailed assessments."
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "review": "After reviewing the additional expert opinions, I maintain my score of 8 for this paper. The reviewers collectively highlight the paper's innovative approach to addressing the issue of missing data using reinforcement learning, which is indeed a significant contribution to the field of machine learning. The empirical results demonstrate the method's superiority across various datasets, aligning with my initial assessment. \n\nBoth reviewers mention the need for improved clarity and discussion of computational complexities, which I also noted. While they pointed out some limitations in scope and analysis, I believe the strengths of the paper, including its theoretical foundations and practical applications in healthcare, outweigh these concerns. \n\nOverall, the paper's core contributions and its adaptability to other feature learning techniques solidify its value in the literature, and I believe it warrants acceptance as it stands."
+      }
+    }
+  },
+  {
+    "paper_id": "bglU8l_Pq8Q",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 5.0,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper investigates the performance gap between cross-attention (CA) models and dual-encoder (DE) models in neural ranking tasks. It explores whether this gap is due to inherent capacity limitations of DE models or their training methodologies. The authors propose a distillation strategy to improve DE models by focusing on ranking order preservation and validate its effectiveness on benchmark datasets.",
+        "strengths": [
+          "The paper provides a thorough theoretical analysis demonstrating that DE models, with sufficient capacity, can approximate a broad class of ranking functions.",
+          "Empirical evaluations are robust, using multiple benchmark datasets to validate the proposed methods.",
+          "The proposed distillation strategy is novel and shows significant improvements in bridging the performance gap between CA and DE models.",
+          "The paper is well-structured, with a clear presentation of theoretical and empirical findings."
+        ],
+        "weaknesses": [
+          "The paper assumes access to a cross-attention model for distillation, which might not always be feasible in practical scenarios.",
+          "The discussion on the limitations and potential biases introduced by the distillation process is limited.",
+          "Some experimental results, such as the impact of using different embedding sizes, are not fully explored in terms of their implications on model capacity and generalization."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper makes a significant contribution to understanding and improving the performance of dual-encoder models in neural ranking tasks. Its combination of theoretical insights and empirical validation provides a compelling case for its proposed solutions. While there are some limitations in the discussion and assumptions made, the overall contribution and clarity of the work justify acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper analyzes the performance gap between cross-attention (CA) and dual-encoder (DE) models in neural ranking. Through theoretical and empirical analysis, it shows that DE models have sufficient capacity to match CA models, but suffer from overfitting. The authors propose distillation techniques focused on preserving document ordering to improve DE performance, demonstrating effectiveness on benchmark datasets.",
+        "strengths": [
+          "Strong theoretical foundation showing DE models have sufficient capacity in principle",
+          "Clear empirical evidence identifying overfitting as the key issue rather than model capacity",
+          "Novel distillation approach with theoretical justification",
+          "Comprehensive experiments on standard benchmarks with strong baselines",
+          "Clear analysis and visualization of model behavior differences"
+        ],
+        "weaknesses": [
+          "Limited exploration of other potential causes for the CA-DE gap",
+          "Experiments focused mainly on MSMARCO and NQ datasets",
+          "Some proposed techniques add complexity to training process",
+          "Limited discussion of computational costs and training efficiency"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "This paper makes significant contributions to understanding and improving dual-encoder models for neural ranking. The theoretical results establish that DE models have sufficient capacity, while the empirical analysis convincingly identifies overfitting as the key issue. The proposed distillation techniques are well-motivated and show clear improvements over baselines. The work is technically sound, clearly presented, and provides both theoretical and practical insights that will benefit the field. While there are some limitations in scope, the core contributions are strong enough to warrant acceptance."
+      },
+      "GPT-4o-mini": {
+        "summary": "This paper investigates the performance gap between dual-encoder (DE) and cross-attention (CA) models in neural ranking for information retrieval. It provides theoretical proof that DE models can represent a wide range of scoring functions with sufficiently large embedding sizes. The authors empirically demonstrate that the gap in performance is primarily due to overfitting of DE models rather than a limitation in their capacity. To address this issue, they propose a distillation strategy focused on preserving the relative ordering of documents, which shows efficacy in improving DE model performance on benchmark datasets.",
+        "strengths": [
+          "Theoretical contributions clearly demonstrating the expressiveness of DE models.",
+          "Empirical evidence highlighting the overfitting issue in DE models compared to CA models.",
+          "Innovative distillation strategy that effectively bridges the performance gap between DE and CA models.",
+          "Comprehensive experiments on multiple datasets with relevant metrics reported."
+        ],
+        "weaknesses": [
+          "The paper could benefit from more detailed discussions on the implications of the findings for practical applications.",
+          "Some sections are overly technical and could be simplified for broader accessibility.",
+          "The distillation methods proposed may require further validation across more diverse datasets and tasks."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper makes significant contributions both theoretically and empirically, addressing a relevant issue in the field of neural ranking. The findings are supported by rigorous experiments and provide a clear pathway for improving DE models through distillation. While there are minor weaknesses regarding accessibility and practical implications, they do not detract from the overall quality and importance of the work."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "confidence": 4,
+        "argument": "After re-evaluating the paper in light of the reviews from other experts, I maintain my original score of 8. The paper's contributions to understanding and improving dual-encoder models for neural ranking are both significant and well-supported by theoretical and empirical evidence. Reviewer 1 and Reviewer 2 highlight the same key strengths I identified, such as the rigorous theoretical results, the effective identification of overfitting issues, and the well-motivated distillation techniques that enhance DE models. Additionally, both reviewers acknowledge minor limitations, such as accessibility and scope, which I also noted in my initial review. However, these do not significantly detract from the overall impact and quality of the work. Therefore, the paper deserves acceptance for its strong core contributions and the valuable insights it provides to the field."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "review": "After reviewing the other experts' assessments, I maintain my original score of 8. Their reviews align well with my initial evaluation and reinforce key points I had identified. The consistent scoring across all reviewers (8/10) reflects a clear consensus on the paper's strong contributions, particularly regarding:\n\n1. The dual theoretical-empirical approach, which provides both rigorous foundations and practical validation\n2. The significant advancement in understanding dual-encoder model behavior\n3. The clear practical implications through distillation techniques\n\nThe other reviewers highlight similar minor limitations around accessibility and assumptions, but agree these don't significantly detract from the paper's value. This alignment in identifying both strengths and limitations increases my confidence in the original assessment.\n\nThe paper represents an important contribution that advances both theoretical understanding and practical capabilities in neural ranking, warranting strong acceptance.",
+        "major_strengths": [
+          "Strong theoretical foundation combined with empirical validation",
+          "Significant insights into dual-encoder model behavior",
+          "Clear practical applications through distillation methods",
+          "Rigorous experimental methodology"
+        ],
+        "major_weaknesses": [
+          "Some limitations in accessibility of theoretical components",
+          "Could expand more on practical implementation considerations"
+        ],
+        "questions_for_authors": [
+          "Could you provide additional guidance on implementing the distillation approach in real-world scenarios?",
+          "How do the theoretical assumptions impact performance in edge cases?"
+        ],
+        "ethics_concerns": "None",
+        "should_accept": true,
+        "confidence_reasons": "High confidence due to consensus with other expert reviewers and clear alignment between theoretical and empirical results"
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "argument": "After reviewing the other expert opinions, I find that my initial assessment remains consistent with the general consensus on the paper's contributions. The paper does indeed provide valuable insights into dual-encoder models in neural ranking tasks, effectively combining theoretical and empirical approaches. The reviewers highlight critical aspects such as the establishment of model capacity and the identification of overfitting as a significant issue, which I also noted. While the critiques regarding limitations in assumptions and scope are valid, they do not diminish the overall strength of the paper's contributions. The proposed distillation techniques and their empirical validation align well with the theoretical insights, reinforcing their importance in advancing this area of research. Thus, I maintain my score of 8, as the paper successfully addresses key challenges and offers practical solutions, making it a noteworthy contribution to the field."
+      }
+    }
+  },
+  {
+    "paper_id": "cU8rknuhxc",
+    "ground_truth_decision": "Accept (Spotlight)",
+    "ground_truth_score": 7.5,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper proposes DISDAIN, a novel intrinsic reward mechanism for unsupervised skill learning in reinforcement learning, aimed at overcoming pessimistic exploration. By using an ensemble of discriminators to measure epistemic uncertainty through their disagreement, DISDAIN provides an exploration bonus that encourages the discovery of new skills. The approach is empirically validated on both the Four Rooms grid world and a suite of 57 Atari games, demonstrating improved skill learning compared to unbonused methods and other exploration bonuses.",
+        "strengths": [
+          "Introduces a novel method (DISDAIN) for addressing pessimistic exploration in unsupervised skill learning.",
+          "The use of ensemble discriminator disagreement is a creative approach to measure epistemic uncertainty.",
+          "Comprehensive empirical validation on both simple and complex environments, including Atari games.",
+          "DISDAIN shows significant improvement over existing methods in terms of skill learning.",
+          "The paper provides a clear motivation and a solid theoretical foundation for the proposed method."
+        ],
+        "weaknesses": [
+          "The paper may be overly focused on discrete skill learning methods, limiting general applicability.",
+          "The computational cost of using ensembles might be high, which could be a barrier for some applications.",
+          "Some design choices, such as the specific size of the ensemble and the tuning of hyperparameters, may require further justification."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in unsupervised skill learning by addressing a critical limitation in existing methods: pessimistic exploration. The novel use of discriminator disagreement as an exploration bonus is well-motivated and empirically validated, showing clear improvements over baselines. While there are some concerns regarding general applicability and computational cost, the strengths of the paper in terms of novelty, empirical rigor, and clarity justify an acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper introduces DISDAIN, a novel exploration bonus for unsupervised skill discovery algorithms that uses ensemble-based uncertainty estimation to counteract pessimistic exploration. The method encourages agents to explore states where an ensemble of skill discriminators disagrees, leading to improved skill learning across diverse environments including Four Rooms and Atari games.",
+        "strengths": [
+          "Novel theoretical insight about the exploration problem inherent in skill discovery algorithms",
+          "Clean derivation of the exploration bonus from information-theoretic principles",
+          "Strong empirical validation across both simple and complex environments",
+          "Thorough ablation studies and hyperparameter analysis",
+          "Clear improvements over both unbonused baselines and standard exploration methods"
+        ],
+        "weaknesses": [
+          "Limited theoretical analysis of convergence properties",
+          "Computational overhead from maintaining discriminator ensemble",
+          "No direct comparison to some recent exploration methods",
+          "Downstream task evaluations could be more comprehensive"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper makes a significant contribution by identifying and addressing a fundamental limitation in skill discovery algorithms. The proposed solution is theoretically well-motivated and shows clear empirical benefits across diverse environments. The extensive experiments and ablations demonstrate the method's robustness and practical utility. While there are some limitations in theoretical analysis and computational overhead, the overall contribution is strong enough to warrant acceptance. The work could enable meaningful progress in unsupervised skill learning by allowing discovery of larger skill repertoires."
+      },
+      "GPT-4o-mini": {
+        "summary": "This paper introduces DISDAIN, a novel exploration bonus for unsupervised skill discovery in reinforcement learning, designed to mitigate the pessimistic exploration problem that arises when agents encounter novel states. By leveraging an ensemble of discriminators to measure disagreement, DISDAIN provides intrinsic rewards based on epistemic uncertainty, thereby encouraging more effective exploration and enhancing skill learning across both simple and complex environments, including Atari games.",
+        "strengths": [
+          "Novelty: The approach of using ensemble-based uncertainty to derive an exploration bonus is a fresh perspective in the field of unsupervised skill discovery.",
+          "Significance: The proposed method addresses a critical challenge in reinforcement learning regarding exploration and skill learning, potentially impacting various applications in AI.",
+          "Soundness: The methodology is well-supported by empirical results demonstrating improvements in skill learning and exploration across multiple environments.",
+          "Clarity: The paper is well-structured, with a clear presentation of ideas, methods, and results, making it accessible to readers."
+        ],
+        "weaknesses": [
+          "Generalization: While the results are promising, the performance of DISDAIN in environments beyond those tested is not explored, leaving questions about its generalizability.",
+          "Complexity: Implementing ensemble learning may introduce additional complexity and computational costs, which are not extensively discussed.",
+          "Hyperparameter sensitivity: The performance metrics indicate robustness to certain hyperparameters, but a more comprehensive analysis on sensitivity would strengthen the findings."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and significant contribution to the exploration challenge in reinforcement learning, with empirical results that convincingly demonstrate the effectiveness of the proposed method. Despite some weaknesses related to generalization and implementation complexity, the strengths of the work outweigh these concerns, making it a valuable addition to the literature."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "Score": 8,
+        "Argument": "After considering the reviews from the other experts, I maintain my score of 8 for this paper. The points raised by the other reviewers align with my initial assessment. Reviewer 1 highlights the theoretical motivation and empirical benefits, which I agree are significant strengths of the paper. The concern about theoretical analysis and computational overhead is valid, but does not outweigh the contribution's overall impact. Reviewer 2 acknowledges the exploration challenge addressed by the paper and notes the empirical results as convincing, which supports my view of the paper's importance. While there are noted weaknesses in generalization and complexity, these do not detract significantly from the paper's core contributions. The work remains a valuable addition to the literature on unsupervised skill learning and exploration in reinforcement learning."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After considering the other reviewers' perspectives, I maintain my score of 8. The other reviewers' assessments align well with my original evaluation, particularly regarding the paper's key contribution in addressing pessimistic exploration through discriminator disagreement. They raise similar concerns about implementation complexity and generalization, but like me, conclude that these limitations are outweighed by the paper's strengths in novelty and empirical validation. The consensus among reviewers reinforces my confidence in the paper's significant contribution to unsupervised skill learning.",
+        "strengths": [
+          "Novel approach to exploration using discriminator disagreement",
+          "Strong empirical results demonstrating clear improvements",
+          "Well-motivated theoretical framework",
+          "Clear presentation and thorough analysis"
+        ],
+        "weaknesses": [
+          "Questions about broader applicability beyond tested environments",
+          "Implementation complexity and computational overhead",
+          "Limited discussion of potential failure cases"
+        ],
+        "questions_for_authors": [
+          "Could you provide more analysis of computational requirements?",
+          "How does the method generalize to different types of environments?",
+          "What are the key failure modes of the approach?"
+        ],
+        "recommendation": "Accept",
+        "confidence_explanation": "High confidence due to clear empirical results and consensus with other expert reviewers on both strengths and limitations."
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "argument": "After reviewing the additional expert reviews, I maintain my original score of 8 for this paper. The concerns raised by both reviewers regarding the general applicability and computational cost are valid and reflect important considerations in the practical implementation of the proposed method. However, I believe that the strengths of the paper, particularly its novelty in addressing pessimistic exploration through discriminator disagreement and its empirical validation, outweigh these concerns. The theoretical motivation is sound, and the extensive experiments demonstrate the method's robustness across diverse environments. Overall, while there are limitations, the contributions are significant and could advance the field of unsupervised skill learning."
+      }
+    }
+  },
+  {
+    "paper_id": "HFPTzdwN39",
+    "ground_truth_decision": "Accept (Poster)",
+    "ground_truth_score": 5.5,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper introduces a novel method called quantized reverse probing to measure the interpretability of unsupervised visual representations. The approach focuses on assessing the semanticity of representations by estimating mutual information between representations and manually labeled concepts. This method differs from traditional linear probing by focusing on reverse prediction from concept space to representation space, capturing complex concept combinations. The paper evaluates various self-supervised models and provides insights into their interpretability beyond conventional metrics.",
+        "strengths": [
+          "Introduces a novel method for evaluating interpretability of visual representations.",
+          "Focuses on capturing complex concept combinations, which traditional methods may miss.",
+          "Provides a robust theoretical foundation based on information theory.",
+          "Comprehensive evaluation of multiple self-supervised methods, offering new insights.",
+          "Approach is scalable and can be applied to a wide range of models and datasets."
+        ],
+        "weaknesses": [
+          "The method relies heavily on the quality and coverage of the concept labels used for probing.",
+          "It might be challenging to generalize findings to domains with limited labeled datasets.",
+          "There is potential overfitting in learning the reverse predictor, which is only partially addressed.",
+          "The scalability of the method with very large datasets or models is not extensively discussed."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant contribution to the field of interpretability in unsupervised representation learning. The proposed method addresses key limitations of existing evaluation strategies, offering a more nuanced understanding of what models capture. Despite some limitations, particularly related to data label dependency and potential overfitting, the theoretical rigor and practical applicability of the method make it a valuable addition to the literature. The comprehensive experiments and insights further strengthen the paper's contribution, warranting acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper proposes a new method called 'quantized reverse probing' to measure the interpretability of self-supervised visual representations. Rather than using standard linear probing to evaluate representations, they propose mapping from concept space to representation space through a quantization bottleneck. This allows measuring how well human-interpretable concepts align with learned representation clusters. The method is used to evaluate and compare various self-supervised learning approaches.",
+        "strengths": [
+          "Novel and well-motivated approach to measuring interpretability of representations",
+          "Strong theoretical foundation based on information theory",
+          "Comprehensive experimental evaluation across many self-supervised methods",
+          "Handles concept combinations naturally unlike standard linear probing",
+          "Clear visualizations and qualitative analysis that validate the approach",
+          "Provides new insights about what concepts different SSL methods learn"
+        ],
+        "weaknesses": [
+          "Dependence on pre-trained expert models for concept extraction",
+          "Choice of number of clusters K is somewhat arbitrary",
+          "Limited analysis of how the method scales to very large concept spaces",
+          "Results focused mainly on ImageNet, could use more diverse datasets"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "This paper makes a significant contribution by introducing a novel and theoretically grounded approach to understanding self-supervised representations. The method provides unique insights that complement existing evaluation approaches and helps explain what these models actually learn. While there are some limitations around the dependence on expert models and parameter choices, the comprehensive evaluation and clear insights derived make this a valuable contribution to the field. The paper is well-written, thorough in its analysis, and addresses an important problem in understanding self-supervised learning."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper presents a novel approach called reverse linear probing to measure the interpretability of self-supervised visual representations. Rather than relying on traditional forward linear probing methods that assess how well representations can predict individual attributes, this work emphasizes the ability to capture combinations of concepts in a more holistic manner. By estimating the mutual information between quantized representation vectors and a set of automatically labeled concepts, the authors argue that their method provides a more meaningful assessment of semanticity in representations, revealing insights about the learned features that go beyond existing benchmarks.",
+        "strengths": [
+          "The approach introduces a novel framework for assessing interpretability, addressing limitations of existing linear probing methods.",
+          "The use of mutual information as a measure of semanticity is theoretically grounded in information theory, enhancing the robustness of the methodology.",
+          "The paper presents comprehensive experiments comparing various self-supervised representation learning methods, providing valuable insights into their interpretability.",
+          "The automatic labeling of datasets using classifiers is an innovative way to enrich the concept space, potentially leading to better evaluation metrics."
+        ],
+        "weaknesses": [
+          "The paper could benefit from clearer explanations of certain technical concepts, as some details may be challenging for readers unfamiliar with information theory.",
+          "While the experimental results are promising, more diverse datasets beyond ImageNet could be explored to validate the generalizability of the approach.",
+          "The discussion on the limitations of the proposed method is somewhat limited, particularly regarding the potential biases introduced by the automatic labeling process."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper contributes significantly to the field of interpretability in self-supervised learning by offering a novel and theoretically sound method for evaluating representations. The strengths of the approach, combined with comprehensive experimental validation, outweigh the weaknesses, which are primarily focused on clarity and scope. Addressing these weaknesses in a revision would further enhance the paper's impact."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "argument": "After considering the arguments presented by the other reviewers, I maintain my original score of 8. The paper indeed presents a novel and theoretically grounded approach to evaluating self-supervised representations, which aligns with the importance of interpretability in this area of machine learning. Both reviewers highlight the paper's strengths in its comprehensive evaluation and theoretical contributions, which I also recognized in my initial review. While there are mentions of limitations concerning dependence on expert models and parameter choices, as well as suggestions for improved clarity and scope, these do not significantly detract from the overall contribution and impact of the paper. The authors have provided a solid foundation that can be built upon in future work, addressing an important aspect of self-supervised learning. Therefore, the original score remains justified."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "main_review": "After considering the other reviews, I maintain my score of 8. The other reviewers' assessments align well with my original evaluation, particularly regarding the paper's significant contribution to interpretability in self-supervised learning and the strong theoretical foundations. They highlight similar strengths in the comprehensive experimental validation and practical applicability. The noted limitations around data label dependency and potential overfitting were also part of my initial concerns, but like the other reviewers, I agree these don't significantly detract from the paper's value. The consistent scoring across reviewers reinforces my confidence in the paper's merit as a strong contribution to the field.",
+        "strengths": [
+          "Novel and theoretically sound approach to evaluating representations in self-supervised learning",
+          "Comprehensive experimental validation",
+          "Addresses important gaps in existing interpretability methods",
+          "Strong practical applicability"
+        ],
+        "weaknesses": [
+          "Some dependency on labeled data",
+          "Potential overfitting concerns",
+          "Limited scope in certain areas"
+        ],
+        "questions_for_authors": [
+          "How might the method be adapted to reduce dependency on labeled data?",
+          "What additional safeguards could be implemented against potential overfitting?"
+        ],
+        "recommendation": "Accept",
+        "confidence_explanation": "High confidence due to alignment with other expert reviewers and thorough understanding of the technical content"
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "review": {
+          "summary": "The paper presents a significant contribution to the field of interpretability in unsupervised representation learning, introducing a novel method that enhances evaluation strategies. It provides a deeper understanding of what self-supervised models capture, addressing key limitations of existing approaches.",
+          "strengths": [
+            "The proposed method offers a theoretically grounded approach to the evaluation of self-supervised representations.",
+            "The paper provides unique insights that complement existing methods, enhancing the understanding of model learning.",
+            "A comprehensive set of experiments is conducted, demonstrating the method's applicability and effectiveness.",
+            "The writing is clear and the analysis thorough, making it accessible and informative."
+          ],
+          "weaknesses": [
+            "The method's reliance on data label dependency could limit its applicability to certain scenarios.",
+            "Potential for overfitting exists, which should be addressed in future work.",
+            "Dependence on expert models and parameter choices may introduce biases that need to be acknowledged."
+          ],
+          "conclusion": "Despite some limitations highlighted by the other reviewers, the contributions of this paper are significant and provide valuable insights into self-supervised learning. The strengths of the methodology and the comprehensive evaluation justify the initial score. The points raised by the other reviewers are valid but do not detract from the overall contribution of the work."
+        }
+      }
+    }
+  },
+  {
+    "paper_id": "EJKLVMB_9T",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 6.0,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper introduces SplitRegex, a novel framework for regex synthesis that utilizes a divide-and-conquer approach. By employing a neural network called NeuralSplitter, the framework splits positive string examples into subparts, allowing for faster and more accurate regex synthesis. The paper demonstrates that SplitRegex significantly improves regex synthesis performance across multiple datasets compared to existing methods.",
+        "strengths": [
+          "Introduces a novel divide-and-conquer approach to regex synthesis.",
+          "Utilizes neural networks to effectively split examples, enhancing synthesis speed and accuracy.",
+          "Demonstrates significant improvements over existing methods on multiple benchmark datasets.",
+          "Combines well with various existing regex synthesis algorithms.",
+          "Comprehensive experimental analysis and results provided."
+        ],
+        "weaknesses": [
+          "The complexity of the NeuralSplitter model and its training process might limit practical applicability.",
+          "The method might struggle with regexes that have complex patterns not easily captured by example splitting.",
+          "The paper could benefit from a more detailed discussion of potential limitations or failure cases."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in regex synthesis by introducing a novel approach that substantially improves performance across various benchmarks. The use of neural networks for example splitting represents a meaningful innovation, and the comprehensive experiments showcase the framework's superiority over existing methods. However, potential complexities in model training and application could be explored further. Overall, the contribution is substantial enough to warrant acceptance."
+      },
+      "Claude-3.5": {
+        "summary": "This paper presents SplitRegex, a novel framework for synthesizing regular expressions (regexes) from positive and negative string examples. The key innovation is using a neural network called NeuralSplitter to split input strings into meaningful parts before synthesizing subregexes for each part. This divide-and-conquer approach significantly improves both the speed and accuracy of regex synthesis compared to existing methods.",
+        "strengths": [
+          "Novel and well-motivated approach using neural networks to guide regex synthesis",
+          "Comprehensive empirical evaluation on multiple benchmark datasets",
+          "Framework is compatible with and improves existing regex synthesis methods",
+          "Clear technical presentation with detailed architecture and implementation details",
+          "Strong experimental results showing significant improvements in both speed and accuracy"
+        ],
+        "weaknesses": [
+          "Limited theoretical analysis of why the splitting approach works better",
+          "Handling of negative examples feels somewhat ad-hoc",
+          "Performance on certain datasets (like KB13) is worse than baseline",
+          "No discussion of computational overhead from neural network inference",
+          "Limited analysis of failure cases and limitations"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "This paper makes a significant contribution to the challenging problem of regex synthesis. The key innovation - using neural networks to guide decomposition of the synthesis problem - is both novel and effective. The empirical results demonstrate clear improvements over state-of-the-art baselines across multiple datasets. While there are some limitations in the theoretical foundations and edge cases, the practical utility and broad applicability of the approach make it a valuable contribution to the field. The paper is also well-written and provides comprehensive implementation details that aid reproducibility."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper presents a novel framework called SplitRegex for synthesizing regular expressions (regexes) from positive and negative examples using a divide-and-conquer strategy. The approach employs a neural network called NeuralSplitter to split example strings into parts, which allows for more efficient and accurate regex synthesis. The authors claim their framework significantly improves upon existing state-of-the-art methods across several benchmark datasets, demonstrating better performance in terms of synthesis speed and accuracy.",
+        "strengths": [
+          "Novelty: The approach introduces a divide-and-conquer paradigm to regex synthesis, which is a new perspective in this domain.",
+          "Clarity: The paper is well-structured, clearly articulating the problem, methodology, and experimental results.",
+          "Empirical evidence: The paper provides thorough experiments on multiple benchmark datasets, showcasing the effectiveness of the proposed method compared to existing approaches.",
+          "Neural network design: The NeuralSplitter is creatively designed to leverage attention mechanisms for improved performance."
+        ],
+        "weaknesses": [
+          "Complexity: The proposed method may introduce additional complexity in terms of training the NeuralSplitter and managing splits, which could be a barrier for practical applications.",
+          "Limited generalizability: The effectiveness of the method may depend heavily on the quality of the initial positive examples and the architecture of the NeuralSplitter, which may not generalize well to all regex patterns.",
+          "Experimental setup: There is a lack of detailed ablation studies to dissect the contributions of individual components of the framework."
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant advancement in the field of regex synthesis with a novel approach that is well-supported by empirical results. While the method's complexity and potential limitations are noted, the contributions to speed and accuracy are compelling enough for acceptance, as they represent a meaningful step forward in addressing a challenging problem."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 8,
+        "argument": "Upon re-evaluation of the paper in light of the other reviewers' comments, I maintain my original score of 8. The paper presents a novel approach to regex synthesis by leveraging neural networks to guide problem decomposition, which is a significant innovation in this challenging area. The empirical results are robust, demonstrating improvements over state-of-the-art baselines across multiple datasets, which both Reviewer 1 and Reviewer 2 have also acknowledged. Both reviewers mention limitations in theoretical foundations and the complexity of the method, but agree on the practical utility and improvement in speed and accuracy that the approach provides. I concur with these assessments; while the paper's theoretical underpinnings could be stronger, its practical contributions are substantial. The paper is well-written, and the implementation details facilitate reproducibility, supporting its potential impact in the field. Therefore, I find the arguments of the other reviewers to be in alignment with my initial evaluation, and the paper remains a valuable contribution deserving of its score."
+      },
+      "Claude-3.5": {
+        "score": 8,
+        "confidence": 4,
+        "review": "After considering the other reviewers' perspectives, I maintain my original score of 8. The other reviewers' assessments align well with my initial evaluation, particularly regarding the paper's significant contributions to regex synthesis and strong empirical validation. They highlight similar strengths I identified: the novel neural approach to example splitting, comprehensive experimental results, and meaningful performance improvements over existing methods. Reviewer 1 raises a good point about potential complexities in model training that could be explored further - this is a valid limitation but not severe enough to lower the score. Reviewer 2's observation about the method's complexity is also fair, but agrees that the speed and accuracy gains outweigh these concerns. Overall, the consensus across reviews reinforces that this represents an important advancement in the field that deserves publication at ICLR.",
+        "main_strengths": [
+          "Novel neural approach to regex synthesis",
+          "Substantial performance improvements on benchmarks",
+          "Strong empirical validation",
+          "Clear technical contribution to an important problem"
+        ],
+        "main_weaknesses": [
+          "Some aspects of model training complexity could be explored further",
+          "Method complexity may present implementation challenges"
+        ],
+        "questions_for_authors": [
+          "Could you provide more details about the practical considerations and challenges in training the neural splitting model?",
+          "How does the method's complexity affect its real-world applicability?"
+        ],
+        "recommended_decision": "Accept",
+        "confidence_reasons": [
+          "Strong alignment with other expert reviewers",
+          "Clear empirical evidence",
+          "Thorough understanding of the technical contribution"
+        ]
+      },
+      "GPT-4o-mini": {
+        "score": 8,
+        "review": "After considering the arguments presented by the other reviewers, I maintain my score of 8 for this paper. The novel approach to regex synthesis, particularly the use of neural networks for example splitting, is indeed a significant advancement that demonstrates clear improvements over existing methods across various benchmarks. Both reviewers highlighted the innovation and practical utility of the work, which I agree strongly with. \n\nWhile it is true that the paper could delve deeper into the complexities of model training and potential edge cases, these limitations do not overshadow the substantial contributions made. The comprehensive experiments and clear presentation of results provide a strong foundation for the claims made. The paper is well-structured and offers valuable implementation details that enhance reproducibility, which is an important aspect in the field. \n\nIn conclusion, while further exploration of theoretical foundations and specific edge cases could strengthen the paper, the overall contribution remains solid enough to justify acceptance."
+      }
+    }
+  },
+  {
+    "paper_id": "MWQCPYSJRN",
+    "ground_truth_decision": "Reject",
+    "ground_truth_score": 4.75,
+    "reviews_round_0": {
+      "GPT-4o": {
+        "summary": "The paper introduces Generative Negative Replay (GNR), a novel technique for continual learning that utilizes generated data as negative examples to mitigate the learning in isolation problem inherent in class-incremental scenarios. The approach is tested on the challenging CORe50 and ImageNet-1000 datasets, demonstrating improved performance over traditional generative replay methods.",
+        "strengths": [
+          "The paper addresses a significant challenge in continual learning: catastrophic forgetting.",
+          "It introduces a novel use of generated data as negative examples, which is a fresh perspective.",
+          "The approach is validated on complex, high-dimensional datasets, showing practical applicability.",
+          "The paper includes a comprehensive comparison with existing methodologies, highlighting the benefits of the proposed method.",
+          "It provides a detailed analysis of the impact of data quality on the effectiveness of negative replay."
+        ],
+        "weaknesses": [
+          "The paper lacks clarity in certain sections, particularly in the explanation of the experimental setup and results.",
+          "Some parts of the paper are cluttered with unnecessary technical details that could be streamlined for better readability.",
+          "The novelty of the approach might be questioned as it primarily revolves around a different usage of existing generative data.",
+          "The experimental results, while promising, do not explore the limitations or potential failure cases of the proposed method."
+        ],
+        "score": 7,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and interesting approach to tackle a well-known problem in continual learning. The use of generative negative replay is a creative solution that is backed by experimental evidence showing its effectiveness in challenging scenarios. While the paper could benefit from improved clarity and a deeper exploration of potential limitations, its contributions are significant enough to warrant acceptance. The work could inspire further research in leveraging generated data in novel ways for continual learning."
+      },
+      "Claude-3.5": {
+        "summary": "This paper proposes a novel approach called 'generative negative replay' for continual learning that uses generated data as negative examples rather than positive ones. The key insight is that while generated data may not be high quality enough to improve classification of old classes, it can effectively serve as negative examples to prevent overfitting when learning new classes in isolation. The approach is validated on complex benchmarks including CORe50 and ImageNet-1000.",
+        "strengths": [
+          "Novel insight about using imperfect generated data as negative examples rather than positive ones",
+          "Strong empirical validation on challenging benchmarks with high-dimensional data",
+          "Thorough ablation studies exploring impact of data quality",
+          "Clear technical presentation with detailed implementation details",
+          "Addresses a major limitation of existing generative replay approaches"
+        ],
+        "weaknesses": [
+          "Limited theoretical analysis/justification for why negative replay works better",
+          "Experiments focused mainly on class-incremental learning scenarios",
+          "Some implementation details specific to AR1 algorithm may limit generalizability",
+          "Limited comparison to other state-of-the-art continual learning methods"
+        ],
+        "score": 8,
+        "decision": "Accept",
+        "reasoning": "The paper presents a significant and novel contribution to continual learning by rethinking how generated data should be used. The key insight about using imperfect generated data as negative examples is both practical and elegant. The empirical validation is thorough and demonstrates clear improvements over standard generative replay on challenging benchmarks. While there are some limitations in terms of theoretical analysis and broader comparisons, the core contribution is strong enough to warrant acceptance. The work could enable more practical applications of generative replay in complex continual learning scenarios."
+      },
+      "GPT-4o-mini": {
+        "summary": "The paper proposes a novel approach called Generative Negative Replay (GNR) for continual learning, aimed at mitigating catastrophic forgetting by using generated data as negative examples instead of positive reinforcement. The authors argue that while generative models typically struggle with high-dimensional data, GNR can effectively help in learning new classes, especially when experiences contain only one or a few classes. The approach is validated through experiments on challenging benchmarks (CORe50 and ImageNet-1000), demonstrating improved performance compared to traditional generative replay methods.",
+        "strengths": [
+          "Novelty: The concept of Generative Negative Replay is a fresh perspective on utilizing generative models in continual learning, focusing on the use of generated data as negative examples.",
+          "Experimental validation: The paper provides comprehensive experiments on complex datasets that reflect real-world challenges, showcasing the effectiveness of the proposed method.",
+          "Addressing a critical issue: The work tackles the significant problem of catastrophic forgetting in continual learning, which is a pressing concern in AI development."
+        ],
+        "weaknesses": [
+          "Clarity: The paper's structure and presentation could be improved, as some sections are dense with information and could benefit from clearer explanations and better organization.",
+          "Comparative analysis: While results are presented, there could be a more detailed comparison with existing methods beyond just generative replay, to better contextualize the contributions.",
+          "Implementation details: Some aspects of the implementation could be elaborated upon, particularly regarding the training dynamics of the generative model and classifier."
+        ],
+        "score": 7,
+        "decision": "Accept",
+        "reasoning": "The paper presents a novel and significant contribution to the field of continual learning by effectively addressing catastrophic forgetting through Generative Negative Replay. Despite some clarity and comparative analysis issues, the experimental results demonstrate clear advantages over traditional methods. Overall, the potential impact and relevance of the proposed approach warrant acceptance."
+      }
+    },
+    "reviews_round_1": {
+      "GPT-4o": {
+        "score": 7,
+        "argument": "After reconsidering the paper in light of the other reviews, I maintain my score of 7. Both Reviewer 1 and Reviewer 2 recognize the paper's novel contribution to the field of continual learning through the use of Generative Negative Replay, which I agree is a key strength. The approach of using imperfect generated data as negative examples is indeed practical and offers a new perspective on tackling catastrophic forgetting. While Reviewer 1 points out the lack of theoretical analysis and broader comparisons, I believe that the empirical evidence provided in the paper sufficiently demonstrates the method's effectiveness, which aligns with my initial assessment. Reviewer 2 mentions issues with clarity and comparative analysis, which I also noted in my initial review. However, these do not significantly detract from the overall contribution and potential impact of the work. Given the strong empirical results and novel approach, the paper warrants acceptance, but I maintain my original score as the concerns about clarity and comparative analysis remain relevant."
+      },
+      "Claude-3.5": {
+        "score": 7,
+        "confidence": 4,
+        "main_review": "After considering the other reviewers' perspectives, I am adjusting my score from 8 to 7. While I maintain my view that this is strong work with novel contributions, the other reviewers raise valid points about clarity issues and limitations in comparative analysis that I may have initially underweighted. The paper's core contribution of Generative Negative Replay is indeed innovative and well-supported by experiments, but a more comprehensive comparative analysis would strengthen the work. The potential impact remains high, but these limitations should be acknowledged.",
+        "strong_points": [
+          "Novel approach to continual learning using generative negative replay",
+          "Strong experimental validation across challenging scenarios",
+          "Clear practical utility and potential impact on the field",
+          "Technically sound methodology"
+        ],
+        "weak_points": [
+          "Could benefit from improved clarity in presentation",
+          "Comparative analysis could be more comprehensive",
+          "Some limitations could be explored more deeply",
+          "Implementation details could be more detailed"
+        ],
+        "recommendation": "Accept",
+        "requested_changes": [
+          "Enhance clarity of methodology presentation",
+          "Expand comparative analysis with existing methods",
+          "Provide more detailed discussion of limitations",
+          "Include more implementation details"
+        ]
+      },
+      "GPT-4o-mini": {
+        "score": 7,
+        "argument": "Upon re-evaluation, I acknowledge the valid points made by Reviewer 1 and Reviewer 2 regarding the significance and novelty of the proposed approach in continual learning. The use of generative negative replay is indeed a creative and practical insight that addresses a well-known problem. The empirical results presented in the paper are compelling and demonstrate the method's effectiveness in challenging scenarios. However, I maintain my score of 7 due to concerns about clarity and the depth of exploration regarding potential limitations. While the contributions are noteworthy, I believe the paper could still benefit from further refinement in its presentation and a more thorough discussion of theoretical implications and broader comparisons. Overall, the work shows promise and could inspire further research, but it currently lacks the polish and comprehensive analysis that would elevate it to a higher score."
+      }
+    }
+  }
+]

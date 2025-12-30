@@ -1,0 +1,11 @@
+{
+  "avg_std_0": 0.23094010767585033,
+  "avg_std_1": 0.05773502691896258,
+  "correlations": {
+    "score_0_GPT-4o": 0.3283477621628255,
+    "score_0_Claude-3.5": NaN,
+    "score_0_GPT-4o-mini": NaN,
+    "ensemble_0": 0.3283477621628256,
+    "consensus_1": 0.17676550254690593
+  }
+}
